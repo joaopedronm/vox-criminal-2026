@@ -1,0 +1,2083 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="Vox Criminal">	
+		<meta name="description" content="Vox Criminal - Congresso de Direito, Perícia Criminal e Psicologia Jurídica">
+		<meta name="keywords" content="Evento, Direito, Perícia, Psicologia Jurídica, Vox Criminal, Recife">	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- SITE TITLE -->
+		<title>Vox Criminal - Congresso de Direito, Perícia Criminal e Psicologia Jurídica</title>
+
+		<!-- FAVICON AND TOUCH ICONS -->
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+		<!-- BOOTSTRAP CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+				
+		<!-- FONT ICONS -->
+		<link href="css/flaticon.css" rel="stylesheet">
+
+		<!-- PLUGINS STYLESHEET -->
+		<link href="css/menu.css" rel="stylesheet">	
+		<link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+		<link href="css/magnific-popup.css" rel="stylesheet">	
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/lunar.css" rel="stylesheet">
+
+		<!-- ON SCROLL ANIMATION -->
+		<link href="css/animate.css" rel="stylesheet">
+
+		<!-- TEMPLATE CSS -->
+		<link href="css/pink-theme.css" rel="stylesheet">
+
+		<!-- RESPONSIVE CSS -->
+		<link href="css/responsive.css" rel="stylesheet">
+
+		<!-- ADITIONAL CSS -->
+		<link rel="stylesheet" href="css/aditional.css">
+
+		<style>
+			/* Countdown Timer */
+			.countdown-wrapper {
+				display: flex;
+				gap: 16px;
+				justify-content: center;
+				margin-top: 20px;
+				flex-wrap: wrap;
+			}
+			.countdown-block {
+				background: rgba(255,255,255,0.12);
+				border: 1px solid rgba(255,255,255,0.25);
+				border-radius: 12px;
+				padding: 14px 20px;
+				min-width: 72px;
+				text-align: center;
+				backdrop-filter: blur(6px);
+			}
+			.countdown-block .count-number {
+				font-size: 2rem;
+				font-weight: 700;
+				color: #fff;
+				line-height: 1;
+				display: block;
+			}
+			.countdown-block .count-label {
+				font-size: 0.7rem;
+				text-transform: uppercase;
+				letter-spacing: .08em;
+				color: rgba(255,255,255,0.75);
+				display: block;
+				margin-top: 4px;
+			}
+
+			/* Ambassador section */
+			.ambassador-section {
+				background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+			}
+			.ambassador-card {
+				background: rgba(255,255,255,0.06);
+				border: 1px solid rgba(255,255,255,0.12);
+				border-radius: 20px;
+				padding: 40px 32px;
+				text-align: center;
+				transition: transform .3s ease, background .3s ease;
+			}
+			.ambassador-card:hover {
+				transform: translateY(-6px);
+				background: rgba(255,255,255,0.1);
+			}
+			.ambassador-card .ico-wrap {
+				width: 70px;
+				height: 70px;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto 20px;
+				font-size: 1.8rem;
+			}
+
+			/* Pricing highlight badge */
+			.pricing-badge {
+				display: inline-block;
+				background: var(--theme-color, #e91e63);
+				color: #fff;
+				font-size: 0.7rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: .06em;
+				padding: 4px 12px;
+				border-radius: 20px;
+				margin-bottom: 10px;
+			}
+
+			/* Early bird pricing */
+			.early-bird-banner {
+				background: linear-gradient(90deg, #e91e63, #c2185b);
+				color: white;
+				text-align: center;
+				padding: 12px 20px;
+				font-weight: 600;
+				font-size: 0.95rem;
+				letter-spacing: .02em;
+			}
+			.early-bird-banner span {
+				font-weight: 800;
+			}
+
+			/* Lote Master Plus highlight */
+			#pt-1-6 {
+				border: 2px solid var(--theme-color, #e91e63);
+				position: relative;
+			}
+			#pt-1-6::before {
+				content: "⭐ Mais Completo";
+				position: absolute;
+				top: -14px;
+				left: 50%;
+				transform: translateX(-50%);
+				background: var(--theme-color, #e91e63);
+				color: white;
+				font-size: 0.72rem;
+				font-weight: 700;
+				text-transform: uppercase;
+				padding: 4px 16px;
+				border-radius: 20px;
+				white-space: nowrap;
+				letter-spacing: .05em;
+			}
+
+			/* Custom carousel sizing */
+			.custom-carousel {
+				width: 100%;
+				max-width: 860px;
+			}
+
+			/* Highlight callout */
+			.callout-box {
+				background: rgba(255,255,255,0.05);
+				border-left: 4px solid var(--theme-color, #e91e63);
+				border-radius: 8px;
+				padding: 18px 24px;
+				margin: 16px 0;
+			}
+			.callout-box p {
+				margin: 0;
+				font-style: italic;
+			}
+
+			/* ===== PAINÉIS DO EVENTO ===== */
+			.painel-card {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				padding: 1.5rem;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 8px;
+				transition: border-color 0.2s ease;
+			}
+
+			.painel-card:hover {
+				border-color: rgba(255, 255, 255, 0.25);
+			}
+
+			.painel-tag {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				font-size: 11px;
+				font-weight: 600;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				padding: 5px 12px;
+				border-radius: 6px;
+			}
+
+			.tag--amber  { background: rgba(239, 159, 39, 0.15); color: #EF9F27; }
+			.tag--purple { background: rgba(127, 119, 221, 0.15); color: #AFA9EC; }
+			.tag--blue   { background: rgba(55, 138, 221, 0.15); color: #85B7EB; }
+			.tag--green  { background: rgba(29, 158, 117, 0.15); color: #5DCAA5; }
+
+			.painel-accent {
+				width: 28px;
+				height: 2px;
+				border-radius: 2px;
+				margin-top: auto;
+				padding-top: 0.5rem;
+			}
+
+			.accent--amber  { background: #EF9F27; }
+			.accent--purple { background: #7F77DD; }
+			.accent--blue   { background: #378ADD; }
+			.accent--green  { background: #1D9E75; }
+		</style>
+
+	</head>
+
+
+
+	<body class="theme--dark"> 
+
+		<!-- PRELOADER SPINNER
+		============================================= -->		
+		<div id="loading">
+			<div id="loader" class="loading--theme">
+				<div class="cssload-spinner"></div>
+			</div>
+		</div>
+
+
+		<!-- PAGE CONTENT
+		============================================= -->	
+		<div id="page" class="page">
+
+
+		<!-- HEADER
+		============================================= -->
+		<header id="header" class="tra-menu navbar-light white-scroll">
+				<div class="header-wrapper">
+
+
+					<!-- MOBILE HEADER -->
+				    <div class="wsmobileheader clearfix">	  	
+				    	<span class="smllogo">
+				    		<a href="#hero-2">
+					    		<img src="images/logo-white.png" alt="mobile-logo">
+					    	</a>
+				    	</span>
+				    	<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>	
+				 	</div>
+
+
+				 	<!-- NAVIGATION MENU -->
+				  	<div class="wsmainfull menu clearfix">
+	    				<div class="wsmainwp clearfix">
+
+
+	    					<!-- HEADER BLACK LOGO -->
+	    					<div class="desktoplogo">
+	    						<a href="#hero-2" class="logo-black">
+	    							<img src="images/logo-white.png" alt="logo">
+	    						</a>
+	    					</div>
+
+
+	    					<!-- HEADER WHITE LOGO -->
+	    					<div class="desktoplogo">
+	    						<a href="#hero-2" class="logo-white"><img src="images/logo-white.png" alt="logo"></a>
+	    					</div>
+
+
+	    					<!-- MAIN MENU -->
+      					<nav class="wsmenu clearfix">
+        					<ul class="wsmenu-list nav-theme">
+
+
+							    <!-- SIMPLE NAVIGATION LINK -->
+						    	<li class="nl-simple" aria-haspopup="true">
+						    		<a href="#features" class="h-link">Home</a>
+						    	</li>
+
+							    <!-- SIMPLE NAVIGATION LINK -->
+						    	<li class="nl-simple" aria-haspopup="true">
+						    		<a href="#sobre-o-evento" class="h-link">Sobre o Evento</a>
+						    	</li>
+
+						    	<!-- SIMPLE NAVIGATION LINK -->
+						    	<li class="nl-simple" aria-haspopup="true">
+						    		<a href="#palestrantes" class="h-link">Palestrantes</a>
+						    	</li>
+
+						    	<!-- SIMPLE NAVIGATION LINK -->
+						    	<li class="nl-simple" aria-haspopup="true">
+						    		<a href="#conteudos" class="h-link">Conteúdos</a>
+						    	</li>
+
+						    	<!-- SIMPLE NAVIGATION LINK -->
+						    	<li class="nl-simple" aria-haspopup="true">
+						    		<a href="#faqs" class="h-link">FAQs</a>
+						    	</li>
+
+
+							    <!-- DOWNLOAD BUTTON -->
+							    <li class="nl-simple mobile-last-link" aria-haspopup="true">
+							    	<a href="#planos" class="btn r-36 ico-20 ico-right btn--theme hover--tra-white last-link">Inscreva-se</a>
+							    </li> 
+
+
+        					</ul>
+        				</nav>	<!-- END MAIN MENU -->
+
+
+    				</div>
+    			</div>	<!-- END NAVIGATION MENU -->
+
+
+			</div>     <!-- End header-wrapper -->
+		</header>	<!-- END HEADER -->
+
+
+
+
+		<!-- HERO
+		============================================= -->	
+		<section id="hero-2" class="bg--fixed hero-section division">
+			<div class="container">	
+				<div class="row justify-content-center">
+
+					<img src="./images/main.png" alt="" class="hero-banner mb-4">
+
+
+					<!-- HERO TEXT -->
+					<div class="col-md-9">
+						<div class="hero-2-txt text-center color--white wow animate__animated animate__fadeInUp">
+
+							<img src="./images/elements/title.png" alt="" class="w-50">
+							<img src="./images/elements/subtitle.png" alt="" class="w-75 mt-4">
+							<p class="mt-4 mb-0">EDIÇÃO RECIFE | <b>7 E 8 DE AGOSTO DE 2026</b></p>
+							<p class="mb-0">SHOPPING RIO MAR - RIO MAR EVENTOS</p>
+							<!-- <div>
+								<img src="./images/elements/10-anos.png" alt="" class="mt-2" width="75">
+							</div> -->
+
+							<!-- Countdown -->
+							<div class="countdown-wrapper" id="countdown">
+								<div class="countdown-block">
+									<span class="count-number" id="count-days">--</span>
+									<span class="count-label">Dias</span>
+								</div>
+								<div class="countdown-block">
+									<span class="count-number" id="count-hours">--</span>
+									<span class="count-label">Horas</span>
+								</div>
+								<div class="countdown-block">
+									<span class="count-number" id="count-minutes">--</span>
+									<span class="count-label">Min</span>
+								</div>
+								<div class="countdown-block">
+									<span class="count-number" id="count-seconds">--</span>
+									<span class="count-label">Seg</span>
+								</div>
+							</div>
+
+							<!-- Buttons -->	
+							<div class="btns-group mt-4">
+								<a href="#planos" class="btn btn-md r-08 btn--theme hover--black text-black">Inscreva-se</a>
+								<a href="#sobre-o-evento" class="btn btn-md r-08 btn--tra-black hover--tra-theme">Saiba Mais</a> 
+							</div>	
+				
+						</div>
+					</div>	<!-- END HERO TEXT -->	
+
+
+				</div>    <!-- End row --> 	
+			</div>	   <!-- End container --> 
+		</section>	<!-- END HERO -->	
+
+
+		<!-- PAINÉIS DO EVENTO
+		============================================= -->
+		<section id="paineis" class="pt-80 pb-80 division">
+			<div class="container">
+
+				<!-- SECTION TITLE -->
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="section-title text-center mb-50">
+							<span class="section-id">Programação</span>
+							<h2 class="h2-xl">Painéis do Evento</h2>
+						</div>
+					</div>
+				</div>
+
+				<!-- PAINÉIS WRAPPER -->
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+					<!-- VOX CRIMINAL -->
+					<div class="col">
+						<div class="painel-card r-12 h-100">
+							<span class="painel-tag tag--amber">
+								Vox Criminal
+							</span>
+							<h6 class="h6-lg mt-3">Direito Penal e Perícia Criminal</h6>
+							<p class="p-sm">Debates aprofundados sobre a prática e os bastidores do sistema penal e pericial.</p>
+							<div class="painel-accent accent--amber"></div>
+						</div>
+					</div>
+
+					<!-- VOX PSI -->
+					<div class="col">
+						<div class="painel-card r-12 h-100">
+							<span class="painel-tag tag--purple">
+								Vox Psi
+							</span>
+							<h6 class="h6-lg mt-3">Psicologia Clínica e Jurídica</h6>
+							<p class="p-sm">A interface entre saúde mental, comportamento humano e o universo jurídico.</p>
+							<div class="painel-accent accent--purple"></div>
+						</div>
+					</div>
+
+					<!-- VOX JURI -->
+					<div class="col">
+						<div class="painel-card r-12 h-100">
+							<span class="painel-tag tag--blue">
+								Vox Juri
+							</span>
+							<h6 class="h6-lg mt-3">Tribunal do Júri</h6>
+							<p class="p-sm">Estratégias, técnicas e casos reais do ambiente mais intenso do processo penal.</p>
+							<div class="painel-accent accent--blue"></div>
+						</div>
+					</div>
+
+					<!-- VOX SEG -->
+					<div class="col">
+						<div class="painel-card r-12 h-100">
+							<span class="painel-tag tag--green">
+								Vox Seg
+							</span>
+							<h6 class="h6-lg mt-3">Segurança Pública</h6>
+							<p class="p-sm">Práticas inovadoras e atualização profissional para quem atua na linha de frente.</p>
+							<div class="painel-accent accent--green"></div>
+						</div>
+					</div>
+
+				</div>
+				<!-- END PAINÉIS WRAPPER -->
+
+			</div>
+		</section>
+		<!-- END PAINÉIS DO EVENTO -->
+
+
+		<!-- SOBRE O EVENTO
+		============================================= -->
+		<section class="pt-100 ct-01 content-section division" id="sobre-o-evento">
+				<div class="container">
+						<div class="row d-flex align-items-center">
+
+								<!-- TEXTO -->
+								<div class="col-12 order-last order-md-2">
+										<div class="txt-block left-column wow animate__animated animate__fadeInRight">
+
+												<!-- Título -->
+												<h2 class="h2-md text-center">O Congresso que Conecta o que Ninguém Mais Conecta</h2>
+
+												<!-- Texto -->
+												<p>
+														Nos dias <strong>7 e 8 de agosto de 2026</strong>, no <strong>Shopping Rio Mar – Rio Mar Eventos</strong>, 
+														em Recife, os maiores nomes do Brasil nas áreas de <strong>Direito Penal</strong>, 
+														<strong>Psicologia Jurídica</strong> e <strong>Perícia Criminal</strong> estarão reunidos para um evento único no país.
+												</p>
+
+												<p>
+														O VOX CRIMINAL é o <strong>único congresso no Brasil</strong> que une, em um único ambiente, essas três grandes áreas — 
+														promovendo uma experiência profunda, prática e transformadora. Mais do que palestras, você viverá uma 
+														imersão com os maiores especialistas do país, discutindo casos reais, métodos aplicáveis e os bastidores da atuação criminal.
+												</p>
+
+												<div class="callout-box">
+													<p>🔐 Os segredos mais profundos da Psicologia, do Direito e da Perícia Criminal, guardados a 50 chaves, serão revelados em palestras exclusivas e diretas ao ponto.</p>
+												</div>
+												
+												<!-- CTA -->
+												<div class="btns-group mt-3 text-center">
+													<a href="#planos" class="btn btn-md r-08 btn--theme hover--black text-black">QUERO GARANTIR MINHA VAGA</a>
+												</div>	
+
+										</div>
+								</div>  
+								<!-- END TEXTO -->
+
+								<!-- IMAGEM -->
+								<!-- <div class="col-md-6 order-first order-md-2">
+										<div class="img-block right-column wow animate__animated animate__fadeInLeft">
+											<img class="img-fluid" src="images/img-0.png" alt="Congresso Direito e Perícia 2026">
+										</div>
+								</div> -->
+
+						</div> <!-- End row -->
+				</div> <!-- End container -->
+		</section>
+		<!-- END SOBRE O EVENTO -->
+
+
+		<!-- NÚMEROS DO EVENTO
+		============================================= -->
+		<section id="numeros-evento" class="pt-80 pb-80 division">
+				<div class="container">
+
+						<div class="row justify-content-center">
+								<div class="col-md-8">
+										<div class="section-title text-center mb-50">
+												<h2 class="h2-xl">Vox Criminal em números</h2>
+										</div>
+								</div>
+						</div>
+
+						<!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4"> -->
+							<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+								<div class="col">
+										<div class="numero-card r-12">
+												<div class="numero-img-wrap">
+														<img src="./images/edicoes-anteriores/03.jpeg" alt="+2000 participantes">
+														<div class="numero-overlay">
+																<span class="numero-icon flaticon-group"></span>
+																<span class="numero-label">+2000 participantes</span>
+														</div>
+												</div>
+										</div>
+								</div>
+
+								<div class="col">
+										<div class="numero-card r-12">
+												<div class="numero-img-wrap">
+														<img src="./images/edicoes-anteriores/05.jpeg" alt="50 palestrantes">
+														<div class="numero-overlay">
+																<span class="numero-icon flaticon-kakao-talk"></span>
+																<span class="numero-label">50 palestrantes</span>
+														</div>
+												</div>
+										</div>
+								</div>
+
+								<div class="col">
+										<div class="numero-card r-12">
+												<div class="numero-img-wrap">
+														<img src="./images/edicoes-anteriores/18.jpeg" alt="10 marcas expositoras">
+														<div class="numero-overlay">
+																<span class="numero-icon flaticon-check"></span>
+																<span class="numero-label">10 marcas expositoras</span>
+														</div>
+												</div>
+										</div>
+								</div>
+
+								<div class="col">
+										<div class="numero-card r-12">
+												<div class="numero-img-wrap">
+														<img src="./images/edicoes-anteriores/17.jpeg" alt="20h de conteúdo">
+														<div class="numero-overlay">
+																<span class="numero-icon flaticon-calendar"></span>
+																<span class="numero-label">20h de conteúdo</span>
+														</div>
+												</div>
+										</div>
+								</div>
+
+						</div>
+
+				</div>
+		</section>
+		<!-- END NÚMEROS DO EVENTO -->
+
+
+
+
+		<!-- PÚBLICO-ALVO
+		============================================= -->
+		<section id="publico-alvo" class="pt-100 features-3 features-section division">
+				<div class="container">
+
+						<!-- SECTION TITLE -->	
+						<div class="row justify-content-center">	
+								<div class="col-md-8">
+										<div class="section-title text-center mb-70">	
+
+												<!-- Título -->	
+												<h2 class="h2-xl">Para quem é este congresso?</h2>	
+
+												<!-- Texto -->
+												<p class="p-lg">Um encontro feito para profissionais, estudantes e pesquisadores que desejam aprofundar seus conhecimentos e ampliar conexões.</p>
+														
+										</div>	
+								</div>
+						</div>
+
+						<!-- PÚBLICO-ALVO WRAPPER -->
+						<div class="fbox-wrapper text-center">
+								<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+										<!-- BOX #1 -->
+										<div class="col">
+												<div class="fbox-3 fb-1 r-12 wow fadeInUp h-100">
+														<!-- Ícone -->
+														<div class="fbox-ico ico-55">
+																<div class="shape-ico color--theme-2">
+																		<span class="flaticon-group"></span>
+																		<svg viewBox="0 0 200 200"><path d="M66.1,-32.6C77.9,-17.7,74.4,11.6,60.8,35.7C47.2,59.7,23.6,78.5,2.8,76.9C-18,75.2,-35.9,53.2,-47.7,30.1C-59.5,7.1,-65.1,-16.9,-56.1,-30.1C-47.1,-43.4,-23.6,-46,1.8,-47C27.2,-48.1,54.3,-47.6,66.1,-32.6Z" transform="translate(100 100)" /></svg>
+																</div>
+														</div>
+														<!-- Texto -->
+														<div class="fbox-txt">
+																<h6 class="h6-lg">Estudantes e Profissionais</h6>
+																<p class="p-sm">Das áreas de Direito, Psicologia, Psicanálise, Medicina, Psiquiatria, Serviço Social, Terapia Ocupacional, Segurança Pública, Biomedicina e Farmácia.</p>
+														</div>
+												</div>
+										</div>
+
+										<!-- BOX #2 -->
+										<div class="col">
+												<div class="fbox-3 fb-2 r-12 wow fadeInUp h-100">
+														<!-- Ícone -->
+														<div class="fbox-ico ico-55">
+																<div class="shape-ico color--theme-2">
+																		<span class="flaticon-magnifying-glass"></span>
+																		<svg viewBox="0 0 200 200"><path d="M66.1,-32.6C77.9,-17.7,74.4,11.6,60.8,35.7C47.2,59.7,23.6,78.5,2.8,76.9C-18,75.2,-35.9,53.2,-47.7,30.1C-59.5,7.1,-65.1,-16.9,-56.1,-30.1C-47.1,-43.4,-23.6,-46,1.8,-47C27.2,-48.1,54.3,-47.6,66.1,-32.6Z" transform="translate(100 100)" /></svg>
+																</div>
+														</div>
+														<!-- Texto -->
+														<div class="fbox-txt">
+																<h6 class="h6-lg">Pesquisadores e Professores</h6>
+																<p class="p-sm">Que atuam em grupos e linhas de pesquisa relacionadas às temáticas do evento.</p>
+														</div>
+												</div>
+										</div>
+
+										<!-- BOX #3 -->
+										<div class="col">
+												<div class="fbox-3 fb-3 r-12 wow fadeInUp h-100">
+														<!-- Ícone -->
+														<div class="fbox-ico ico-55">
+																<div class="shape-ico color--theme-2">
+																		<span class="flaticon-visibility"></span>
+																		<svg viewBox="0 0 200 200"><path d="M66.1,-32.6C77.9,-17.7,74.4,11.6,60.8,35.7C47.2,59.7,23.6,78.5,2.8,76.9C-18,75.2,-35.9,53.2,-47.7,30.1C-59.5,7.1,-65.1,-16.9,-56.1,-30.1C-47.1,-43.4,-23.6,-46,1.8,-47C27.2,-48.1,54.3,-47.6,66.1,-32.6Z" transform="translate(100 100)" /></svg>
+																</div>
+														</div>
+														<!-- Texto -->
+														<div class="fbox-txt">
+																<h6 class="h6-lg">Peritos e Segurança Pública</h6>
+																<p class="p-sm">Peritos Criminais e profissionais da Segurança Pública em busca de atualização e práticas inovadoras.</p>
+														</div>
+												</div>
+										</div>
+
+										<!-- BOX #4 -->
+										<div class="col">
+												<div class="fbox-3 fb-4 r-12 wow fadeInUp h-100">
+														<!-- Ícone -->
+														<div class="fbox-ico ico-55">
+																<div class="shape-ico color--theme-2">
+																		<span class="flaticon-dice"></span>
+																		<svg viewBox="0 0 200 200"><path d="M66.1,-32.6C77.9,-17.7,74.4,11.6,60.8,35.7C47.2,59.7,23.6,78.5,2.8,76.9C-18,75.2,-35.9,53.2,-47.7,30.1C-59.5,7.1,-65.1,-16.9,-56.1,-30.1C-47.1,-43.4,-23.6,-46,1.8,-47C27.2,-48.1,54.3,-47.6,66.1,-32.6Z" transform="translate(100 100)" /></svg>
+																</div>
+														</div>
+														<!-- Texto -->
+														<div class="fbox-txt">
+																<h6 class="h6-lg">Interessados em Criminologia</h6>
+																<p class="p-sm">Estudiosos da Criminologia e qualquer pessoa que deseje compreender como Direito, Psicologia e Perícia Criminal dialogam.</p>
+														</div>
+												</div>
+										</div>
+
+								</div> <!-- End row -->  
+						</div>	<!-- END WRAPPER -->
+
+				</div> <!-- End container -->
+		</section>
+		<!-- END PÚBLICO-ALVO -->
+
+
+
+
+		<!-- BENEFÍCIOS DE PARTICIPAR
+		============================================= -->
+		<section id="beneficios" class="pt-100 ct-01 content-section division">
+			<div class="container">
+					<div class="row d-flex align-items-center">
+
+							<!-- BLOCO DE IMAGEM -->
+							<div class="col-md-6">
+									<div class="img-block left-column wow animate__animated animate__fadeInRight">
+											<img class="img-fluid" src="images/img-02d.png" alt="Benefícios do Congresso">
+									</div>
+							</div>
+
+							<!-- BLOCO DE TEXTO -->	
+							<div class="col-md-6">
+									<div class="txt-block right-column wow animate__animated animate__fadeInLeft">
+
+											<!-- Título -->	
+											<h2 class="h2-md">Em apenas 2 dias, você vai viver</h2>
+
+											<!-- Texto -->	
+											<p>
+													Ao garantir sua vaga no Congresso Vox Criminal 2026, você terá acesso a muito mais do que palestras. 
+													É uma oportunidade de se atualizar, ampliar conexões e se destacar profissionalmente.
+											</p>
+
+											<!-- Lista de Benefícios -->
+											<ul class="simple-list">
+													<li class="list-item">
+															<p>🔥 <strong>Experiência de alto nível</strong> com conteúdo atualizado e aplicado à prática profissional.</p>
+													</li>
+
+													<li class="list-item">
+															<p>🤝 <strong>Networking estratégico</strong> e qualificado com profissionais de todo o Brasil.</p>
+													</li>
+
+													<li class="list-item">
+															<p>📚 <strong>Conhecimento prático e aplicável</strong> imediatamente à sua atuação.</p>
+													</li>
+
+													<li class="list-item">
+															<p>🎓 <strong>Certificado de 50h</strong> emitido após o evento.</p>
+													</li>
+
+													<li class="list-item">
+															<p>🔴 <strong>Debates reais</strong> sobre o sistema de justiça criminal com os maiores nomes do país.</p>
+													</li>
+											</ul>
+
+											<div class="btns-group mt-3">
+												<a href="#planos" class="btn btn-md r-08 btn--theme hover--black text-black">QUERO GARANTIR MINHA VAGA</a>
+											</div>
+
+									</div>
+							</div>	
+							<!-- END BLOCO DE TEXTO -->
+
+					</div> <!-- End row -->
+			</div> <!-- End container -->
+		</section>
+		<!-- END BENEFÍCIOS DE PARTICIPAR -->
+
+
+		
+		<!-- TEAM SECTION -->
+		<section id="palestrantes" class="pt-100 pb-50 team-1 team-section division">
+				<div class="container">
+						<!-- SECTION TITLE -->	
+						<div class="row justify-content-center">	
+								<div class="col-md-9 col-lg-8">
+										<div class="section-title text-center mb-70">	
+												<!-- Title -->
+												<h2 class="h2-xl">Palestrantes</h2>
+												<!-- Text -->
+												<p class="p-lg">Os maiores especialistas do país estarão reunidos em um só lugar para uma experiência inesquecível.</p>
+										</div>	
+								</div>
+						</div>
+
+						<!-- TEAM MEMBERS WRAPPER -->	
+						<div class="team-members-wrapper">
+								<div id="speakers-container" class="row row-cols-3 row-cols-sm-4 row-cols-md-5 row-cols-lg-8">
+										<!-- Os cards dos palestrantes serão inseridos aqui dinamicamente -->
+								</div>
+						</div>	<!-- END TEAM MEMBERS WRAPPER -->	
+				</div>	    <!-- End container -->
+		</section>	<!-- END TEAM -->
+
+
+
+
+		<!-- CONTEÚDOS ABORDADOS
+		============================================= -->
+		<section id="conteudos" class="pt-80 bc-04 ws-wrapper content-section">
+				<div class="container">
+						<div class="bc-04-wrapper r-24 py-5">
+								<div class="row d-flex align-items-center">
+
+										<!-- BLOCO DE TEXTO -->	
+										<div class="col-md-5 col-lg-6 order-last order-md-2">
+												<div class="txt-block left-column wow animate__animated animate__fadeInRight">
+
+														<!-- Título -->	
+														<h2 class="h2-md">Conteúdos abordados no congresso</h2>
+
+														<!-- Texto -->	
+														<p>
+																Durante os dois dias de evento, você terá acesso a conteúdos exclusivos que unem teoria e prática, 
+																promovendo reflexões e trazendo ferramentas aplicáveis ao dia a dia dos profissionais das áreas envolvidas.
+														</p>
+
+														<!-- Lista de Conteúdos -->	
+														<ul class="simple-list">
+
+																<li class="list-item">
+																		<p>Temas atuais sobre <strong>Direito Penal</strong>, <strong>Psicologia Jurídica</strong> e <strong>Perícia Criminal</strong>.</p>
+																</li>
+
+																<li class="list-item">
+																		<p>Discussões práticas que demonstram a integração entre diferentes áreas do conhecimento.</p>
+																</li>
+
+																<li class="list-item">
+																		<p>Análises de <strong>casos reais</strong>, protocolos e debates que contribuem diretamente para a atuação profissional.</p>
+																</li>
+
+																<li class="list-item">
+																		<p>Conexão direta entre <strong>teoria, perícia e comportamento humano</strong>.</p>
+																</li>
+
+														</ul>
+
+												</div>
+										</div>	
+										<!-- END BLOCO DE TEXTO -->	
+
+
+										<!-- BLOCO DE IMAGEM / VÍDEO -->
+										<div class="col-md-7 col-lg-6 order-first order-md-2">
+												<div class="bc-4-img right-column">
+													<div id="conteudosCarousel"
+														class="carousel slide r-24 block--shadow overflow-hidden"
+														data-bs-ride="carousel"
+														data-bs-interval="3500">
+
+														<div class="carousel-inner">
+
+															<div class="carousel-item active">
+																<img src="images/conteudos/01.jpeg" class="d-block w-100" alt="">
+															</div>
+
+															<div class="carousel-item">
+																<img src="images/conteudos/02.jpeg" class="d-block w-100" alt="">
+															</div>
+
+															<div class="carousel-item">
+																<img src="images/conteudos/03.jpeg" class="d-block w-100" alt="">
+															</div>
+
+															<div class="carousel-item">
+																<img src="images/conteudos/04.jpeg" class="d-block w-100" alt="">
+															</div>
+															<div class="carousel-item">
+																<img src="images/conteudos/05.jpeg" class="d-block w-100" alt="">
+															</div>
+
+														</div>
+
+														<!-- Botões -->
+														<button class="carousel-control-prev" type="button"
+															data-bs-target="#conteudosCarousel"
+															data-bs-slide="prev">
+
+															<span class="carousel-control-prev-icon"></span>
+
+														</button>
+
+														<button class="carousel-control-next" type="button"
+															data-bs-target="#conteudosCarousel"
+															data-bs-slide="next">
+
+															<span class="carousel-control-next-icon"></span>
+
+														</button>
+
+														<!-- Indicadores -->
+														<div class="carousel-indicators">
+															<button type="button" data-bs-target="#conteudosCarousel" data-bs-slide-to="0" class="active"></button>
+															<button type="button" data-bs-target="#conteudosCarousel" data-bs-slide-to="1"></button>
+															<button type="button" data-bs-target="#conteudosCarousel" data-bs-slide-to="2"></button>
+															<button type="button" data-bs-target="#conteudosCarousel" data-bs-slide-to="3"></button>
+															<button type="button" data-bs-target="#conteudosCarousel" data-bs-slide-to="4"></button>
+														</div>
+
+													</div>
+												</div>
+										</div>
+
+								</div>   <!-- End row -->	
+						</div>    <!-- End content wrapper -->
+				</div>     <!-- End container -->	
+		</section>
+		<!-- END CONTEÚDOS ABORDADOS -->
+
+
+
+
+		<!-- PRICING PLANS
+		============================================= -->
+		<section id="planos" class="gr--whitesmoke pricing-1 pb-60 inner-page-hero pricing-section division">
+			<div class="container">
+
+				<!-- SECTION TITLE -->	
+				<div class="row justify-content-center">	
+					<div class="col-md-9 col-lg-8">
+						<div class="section-title mb-60 text-center">	
+							<h2 class="h2-title">Inscrição</h2>
+							<p class="p-lg">Escolha o pacote ideal para participar do Congresso<br><strong>Garanta sua vaga agora! 🔥</strong></p>
+						</div>	
+					</div>
+				</div>	
+
+				<!-- PRICING TABLES -->
+				<div class="pricing-1-wrapper">
+					<div class="row row-cols-1 row-cols-md-3 align-items-stretch">
+
+						<!-- ESTUDANTE STANDART -->
+						<div class="col">
+							<div id="pt-1-1" class="p-table pricing-1-table bg--white block--shadow r-12 h-100 wow animate__animated animate__fadeInUp" style="border: 3px solid #315d6d !important;">
+								<div class="pricing-table-header">
+									<span class="pricing-badge" style="background:#315d6d !important; color:#fff !important;">Estudante</span>
+									<h5 class="h5-md">Estudante Standart</h5>
+									<div class="price">
+										<span class="color--header">R$ 179,90</span>
+										<p>Ingresso completo para estudantes com kit e certificado.</p>
+									</div>
+									<a href="https://doity.com.br/vox-criminal--congresso-de-direito-pericia-criminal-e-psicologia-juridica--recife/passo1?box=1&cat=EstudanteStandart" class="pt-btn btn r-36 hover--tra-black" style="background:#315d6d !important; border-color:#315d6d !important; color:#fff !important;">Comprar Ingresso</a>
+								</div>
+								<ul class="pricing-features ico-10 mt-25">
+									<li><p><span class="flaticon-check" style="color:#315d6d !important;"></span> Acesso ao evento</p></li>
+									<li><p><span class="flaticon-check" style="color:#315d6d !important;"></span> Kit evento (pasta simples, bloco, caneta, crachá)</p></li>
+									<li><p><span class="flaticon-check" style="color:#315d6d !important;"></span> Certificado de 50h</p></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- VOCÊ E UM AMIGO - VERSÃO ESTUDANTE -->
+						<div class="col pt-3 pt-md-0">
+							<div id="pt-1-2" class="p-table pricing-1-table bg--white block--shadow r-12 h-100 wow animate__animated animate__fadeInUp" style="border: 3px solid #6b7a52 !important;">
+								<div class="pricing-table-header">
+									<span class="pricing-badge" style="background:#6b7a52 !important; color:#fff !important;">Dupla</span>
+									<h5 class="h5-md">Você e um Amigo(a) - Estudante</h5>
+									<div class="price">
+										<span class="color--header">R$ 139,90</span>
+										<p>Valor por pessoa. Venha com um amigo e economize!</p>
+									</div>
+									<a href="https://doity.com.br/vox-criminal--congresso-de-direito-pericia-criminal-e-psicologia-juridica--recife/passo1?box=1&cat=amigoestudante" class="pt-btn btn r-36 hover--tra-black" style="background:#6b7a52 !important; border-color:#6b7a52 !important; color:#fff !important;">Comprar Ingresso</a>
+								</div>
+								<ul class="pricing-features ico-10 mt-25">
+									<li><p><span class="flaticon-check" style="color:#6b7a52 !important;"></span> Acesso ao evento</p></li>
+									<li><p><span class="flaticon-check" style="color:#6b7a52 !important;"></span> Kit básico (pasta simples, bloco, caneta, crachá)</p></li>
+									<li><p><span class="flaticon-check" style="color:#6b7a52 !important;"></span> Certificado de 50h complementares</p></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- LOTE PRATA -->
+						<div class="col pt-3 pt-md-0">
+							<div id="pt-1-3" class="p-table pricing-1-table bg--white block--shadow r-12 h-100 wow animate__animated animate__fadeInUp" style="border: 3px solid #5d6470 !important;">
+								<div class="pricing-table-header">
+									<span class="pricing-badge" style="background:#5d6470 !important; color:#fff !important;">Premium</span>
+									<h5 class="h5-md">Lote Prata - Estudante e Profissional</h5>
+									<div class="price">
+										<span class="color--header">R$ 399,00</span>
+										<p>Pacote premium com benefícios exclusivos.</p>
+									</div>
+									<a href="https://doity.com.br/vox-criminal--congresso-de-direito-pericia-criminal-e-psicologia-juridica--recife/passo1?box=1&cat=prataestudanteeprofissional" class="pt-btn btn r-36 hover--tra-black" style="background:#5d6470 !important; border-color:#5d6470 !important; color:#fff !important;">Comprar Ingresso</a>
+								</div>
+								<ul class="pricing-features ico-10 mt-25">
+									<li><p><span class="flaticon-check" style="color:#5d6470 !important;"></span> Cadeiras na frente do evento</p></li>
+									<li><p><span class="flaticon-check" style="color:#5d6470 !important;"></span> Kit Prata (Ecobag IUEJ, caneta personalizada, caderno, crachá)</p></li>
+									<li><p><span class="flaticon-check" style="color:#5d6470 !important;"></span> Acesso à gravação por 60 dias</p></li>
+									<li><p><span class="flaticon-check" style="color:#5d6470 !important;"></span> Certificado de 30h complementares</p></li>
+									<li><p><span class="flaticon-check" style="color:#5d6470 !important;"></span> Copo oficial do evento</p></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- VERSÃO ONLINE -->
+						<div class="col pt-3">
+							<div id="pt-1-4" class="p-table pricing-1-table bg--white block--shadow r-12 h-100 wow animate__animated animate__fadeInUp" style="border: 3px solid #7460a8 !important;">
+								<div class="pricing-table-header">
+									<span class="pricing-badge" style="background:#7460a8 !important; color:#fff !important;">Online</span>
+									<h5 class="h5-md">Versão Online Individual - Estudante e Profissional</h5>
+									<div class="price">
+										<span class="color--header">R$ 69,90</span>
+										<p>Participe de onde estiver com transmissão ao vivo.</p>
+									</div>
+									<a href="https://doity.com.br/vox-criminal--congresso-de-direito-pericia-criminal-e-psicologia-juridica--recife/passo1?box=1&cat=onlineestudanteeprofissional" class="pt-btn btn r-36 hover--tra-black" style="background:#7460a8 !important; border-color:#7460a8 !important; color:#fff !important;">Comprar Ingresso</a>
+								</div>
+								<ul class="pricing-features ico-10 mt-25">
+									<li><p><span class="flaticon-check" style="color:#7460a8 !important;"></span> Acesso à transmissão ao vivo</p></li>
+									<li><p><span class="flaticon-check" style="color:#7460a8 !important;"></span> Acesso à gravação por 90 dias</p></li>
+									<li><p><span class="flaticon-check" style="color:#7460a8 !important;"></span> Certificado de 40h</p></li>
+								</ul>
+							</div>
+						</div>
+
+						<!-- LOTE MASTER PLUS -->
+						<div class="col pt-3">
+							<div id="pt-1-5" class="p-table pricing-1-table bg--white block--shadow r-12 h-100 wow animate__animated animate__fadeInUp" style="border: 3px solid #b08a3e !important;">
+								<div class="pricing-table-header">
+									<span class="pricing-badge" style="background:#b08a3e !important; color:#fff !important;">VIP</span>
+									<h5 class="h5-md">Lote Master Plus</h5>
+									<div class="price">
+										<span class="color--header">R$ 749,90</span>
+										<p>Experiência completa com jantar exclusivo e acesso VIP.</p>
+									</div>
+									<a href="https://doity.com.br/vox-criminal--congresso-de-direito-pericia-criminal-e-psicologia-juridica--recife/passo1?box=1&cat=loteplus" class="pt-btn btn r-36 hover--tra-black" style="background:#b08a3e !important; border-color:#b08a3e !important; color:#fff !important;">Comprar Ingresso</a>
+								</div>
+								<ul class="pricing-features ico-10 mt-25">
+									<li><p><span class="flaticon-check" style="color:#b08a3e !important;"></span> Cadeiras na frente do evento</p></li>
+									<li><p><span class="flaticon-check" style="color:#b08a3e !important;"></span> Kit Master exclusivo</p></li>
+									<li><p><span class="flaticon-check" style="color:#b08a3e !important;"></span> Acesso à gravação por 60 dias</p></li>
+									<li><p><span class="flaticon-check" style="color:#b08a3e !important;"></span> Certificado de 50h</p></li>
+									<li><p><span class="flaticon-check" style="color:#b08a3e !important;"></span> Jantar com os palestrantes</p></li>
+									<li><p><span class="flaticon-check" style="color:#b08a3e !important;"></span> Acesso à sala VIP</p></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- PAYMENT INFO -->
+				<div class="row justify-content-center mt-4">
+					<div class="col-md-8 text-center">
+						<p class="p-sm">💳 Parcele em até <strong>12x</strong> no cartão de crédito &nbsp;|&nbsp; Também aceitamos <strong>Boleto</strong> e <strong>Pix</strong></p>
+					</div>
+				</div>
+
+			</div>     
+		</section>
+		<!-- END PRICING PLANS -->
+
+
+
+
+		<!-- INFORMAÇÕES DO EVENTO
+		============================================= -->
+		<section id="info-evento" class="py-100 features-2 features-section division">
+				<div class="container">
+
+						<!-- SECTION TITLE -->	
+						<div class="row justify-content-center">	
+								<div class="col-md-9 col-lg-8">
+										<div class="section-title text-center mb-80">	
+												<!-- Title -->	
+												<h2 class="h2-xl">Data, Local e Programação</h2>	
+												<!-- Text -->
+												<p class="p-lg">Saiba os detalhes essenciais para participar do Congresso</p>
+										</div>	
+								</div>
+						</div>
+
+						<!-- FEATURES WRAPPER -->
+						<div class="fbox-wrapper">
+								<div class="row justify-content-center">
+
+										<!-- FEATURE BOX #1 -->
+										<div class="col-md-4">
+												<div class="fbox-2 fb-1 wow animate__animated animate__fadeInUp">
+														<!-- Icon -->
+														<div class="fbox-ico-wrap ico-55">
+																<div class="shape-ico color--theme-2">
+																		<span class="flaticon-calendar"></span>
+																		<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+																				<path d="M66.1,-32.6C77.9,-17.7,74.4,11.6,60.8,35.7C47.2,59.7,23.6,78.5,2.8,76.9C-18,75.2,-35.9,53.2,-47.7,30.1C-59.5,7.1,-65.1,-16.9,-56.1,-30.1C-47.1,-43.4,-23.6,-46,1.8,-47C27.2,-48.1,54.3,-47.6,66.1,-32.6Z" transform="translate(100 100)" />
+																		</svg>
+																</div>
+														</div>
+														<!-- Text -->
+														<div class="fbox-txt">
+																<h5>Data</h5>
+																<p>7 e 8 de Agosto de 2026</p>
+														</div>
+												</div>
+										</div>
+
+										<!-- FEATURE BOX #2 -->
+										<div class="col-md-4">
+												<div class="fbox-2 fb-2 wow animate__animated animate__fadeInUp">
+														<!-- Icon -->
+														<div class="fbox-ico-wrap ico-55">
+																<div class="shape-ico color--theme-2">
+																		<span class="flaticon-pin"></span>
+																		<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+																				<path d="M66.1,-32.6C77.9,-17.7,74.4,11.6,60.8,35.7C47.2,59.7,23.6,78.5,2.8,76.9C-18,75.2,-35.9,53.2,-47.7,30.1C-59.5,7.1,-65.1,-16.9,-56.1,-30.1C-47.1,-43.4,-23.6,-46,1.8,-47C27.2,-48.1,54.3,-47.6,66.1,-32.6Z" transform="translate(100 100)" />
+																		</svg>
+																</div>
+														</div>
+														<!-- Text -->
+														<div class="fbox-txt">
+																<h5>Local</h5>
+																<p>Shopping Rio Mar – Rio Mar Eventos<br>Recife, PE</p>
+														</div>
+												</div>
+										</div>
+
+										<!-- FEATURE BOX #3 -->
+										<div class="col-md-4">
+												<div class="fbox-2 fb-3 wow animate__animated animate__fadeInUp">
+														<!-- Icon -->
+														<div class="fbox-ico-wrap ico-55">
+																<div class="shape-ico color--theme-2">
+																		<span class="flaticon-folder-1"></span>
+																		<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+																				<path d="M66.1,-32.6C77.9,-17.7,74.4,11.6,60.8,35.7C47.2,59.7,23.6,78.5,2.8,76.9C-18,75.2,-35.9,53.2,-47.7,30.1C-59.5,7.1,-65.1,-16.9,-56.1,-30.1C-47.1,-43.4,-23.6,-46,1.8,-47C27.2,-48.1,54.3,-47.6,66.1,-32.6Z" transform="translate(100 100)" />
+																		</svg>
+																</div>
+														</div>
+														<!-- Text -->
+														<div class="fbox-txt">
+																<h5>Certificado</h5>
+																<p>50 horas (plano Master Plus)<br>30h para demais planos</p>
+														</div>
+												</div>
+										</div>
+
+								</div>  <!-- End row -->  
+						</div>	<!-- END FEATURES WRAPPER -->
+
+				</div>     <!-- End container -->
+		</section>
+		<!-- END INFORMAÇÕES DO EVENTO -->
+
+
+				<!-- CARROSSEL INFINITO 1 + FRASE DE DESTAQUE
+		============================================= -->
+		<section id="galeria-strip" class="pb-100 division">
+
+				<!-- CARROSSEL TOPO -->
+				<div class="strip-carousel-wrap overflow-hidden">
+						<div class="strip-track strip-track--1">
+								<img src="./images/edicoes-anteriores/01.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/02.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/03.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/04.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/05.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/06.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/07.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/08.jpeg" alt="">
+								<!-- duplicadas para loop contínuo -->
+								<img src="./images/edicoes-anteriores/01.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/02.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/03.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/04.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/05.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/06.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/07.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/08.jpeg" alt="">
+						</div>
+				</div>
+
+				<!-- FRASE DE DESTAQUE -->
+				<div class="strip-headline">
+						<p>A revolução na sua Advocacia começa aqui</p>
+				</div>
+
+				<!-- CARROSSEL BASE (direção inversa) -->
+				<div class="strip-carousel-wrap overflow-hidden">
+						<div class="strip-track strip-track--2">
+								<img src="./images/edicoes-anteriores/09.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/10.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/11.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/12.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/13.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/14.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/15.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/16.jpeg" alt="">
+								<!-- duplicadas para loop contínuo -->
+								<img src="./images/edicoes-anteriores/09.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/10.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/11.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/12.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/13.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/14.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/15.jpeg" alt="">
+								<img src="./images/edicoes-anteriores/16.jpeg" alt="">
+						</div>
+				</div>
+
+		</section>
+		<!-- END CARROSSEL INFINITO + FRASE -->
+
+
+
+
+		<!-- PROGRAMAÇÃO
+		============================================= -->
+		<section id="programacao" class="content-section division">
+			<div class="container">
+
+				<!-- SECTION TITLE -->
+				<div class="row justify-content-center mb-50">
+					<div class="col-md-8">
+						<div class="section-title text-center">
+							<h2 class="h2-xl">Programação</h2>
+							<p class="p-lg">Dois dias intensos de conhecimento e networking</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- NAV TABS -->
+				<ul class="nav nav-tabs justify-content-center" id="programacaoTab" role="tablist">
+					<li class="nav-item">
+						<button class="nav-link active" id="dia1-tab" data-bs-toggle="tab" data-bs-target="#dia1" type="button" role="tab" aria-controls="dia1" aria-selected="true">
+							Dia 07/08
+						</button>
+					</li>
+					<li class="nav-item">
+						<button class="nav-link" id="dia2-tab" data-bs-toggle="tab" data-bs-target="#dia2" type="button" role="tab" aria-controls="dia2" aria-selected="false">
+							Dia 08/08
+						</button>
+					</li>
+				</ul>
+
+				<!-- TAB CONTENT -->
+				<div class="tab-content mt-4" id="programacaoTabContent">
+
+					<!-- DIA 1 -->
+					<div class="tab-pane fade show active" id="dia1" role="tabpanel" aria-labelledby="dia1-tab">
+						<div class="p-4 shadow-sm r-24">
+							<h4 class="mb-3">Dia 7 de Agosto – Sexta-feira</h4>
+							<ul class="simple-list">
+								<li class="list-item">
+									<p><strong>09h – 12h:</strong> Palestras e atividades</p>
+								</li>
+								<li class="list-item">
+									<p><strong>12h – 14h:</strong> Intervalo</p>
+								</li>
+								<li class="list-item">
+									<p><strong>14h – 18h:</strong> Palestras e atividades</p>
+								</li>
+								<li class="list-item">
+									<p>🍽️ <strong>Noite:</strong> Jantar exclusivo com palestrantes (Master Plus)</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- DIA 2 -->
+					<div class="tab-pane fade" id="dia2" role="tabpanel" aria-labelledby="dia2-tab">
+						<div class="p-4 shadow-sm r-24">
+							<h4 class="mb-3">Dia 8 de Agosto – Sábado</h4>
+							<ul class="simple-list">
+								<li class="list-item">
+									<p><strong>09h – 12h:</strong> Palestras e atividades</p>
+								</li>
+								<li class="list-item">
+									<p><strong>12h – 14h:</strong> Intervalo</p>
+								</li>
+								<li class="list-item">
+									<p><strong>14h – 18h:</strong> Palestras e atividades</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div> <!-- END TAB CONTENT -->
+
+			</div>
+		</section>
+		<!-- END PROGRAMAÇÃO -->
+
+
+
+		<!-- SEÇÃO FOTOS DO LOCAL DO EVENTO -->
+		<section class="py-100 photos-section division">
+				<div class="container-fluid px-0">
+
+						<!-- SECTION TITLE -->
+						<div class="row justify-content-center">
+								<div class="col-md-8">
+										<div class="section-title text-center mb-60">
+												<h2 class="h2-title">Fotos do Local</h2>
+												<p class="p-lg">Confira algumas imagens do espaço onde acontecerá o evento</p>
+										</div>
+								</div>
+						</div>
+
+						<!-- STRIP PHOTOS -->
+						<div class="photos-strip-wrap">
+								<div class="photos-strip" id="photosStrip">
+
+										<div class="photo-slide" data-src="images/local-do-evento-01.jpg">
+												<img src="images/local-do-evento-01.jpg" alt="Local do evento">
+												<div class="photo-slide-overlay"><span class="flaticon-visibility"></span></div>
+										</div>
+										<div class="photo-slide" data-src="images/local-do-evento-02.jpeg">
+												<img src="images/local-do-evento-02.jpeg" alt="Local do evento">
+												<div class="photo-slide-overlay"><span class="flaticon-visibility"></span></div>
+										</div>
+										<div class="photo-slide" data-src="images/local-do-evento-03.jpeg">
+												<img src="images/local-do-evento-03.jpeg" alt="Local do evento">
+												<div class="photo-slide-overlay"><span class="flaticon-visibility"></span></div>
+										</div>
+										<div class="photo-slide" data-src="images/local-do-evento-04.jpeg">
+												<img src="images/local-do-evento-04.jpeg" alt="Local do evento">
+												<div class="photo-slide-overlay"><span class="flaticon-visibility"></span></div>
+										</div>
+										<div class="photo-slide" data-src="images/local-do-evento-05.png">
+												<img src="images/local-do-evento-05.png" alt="Local do evento">
+												<div class="photo-slide-overlay"><span class="flaticon-visibility"></span></div>
+										</div>
+										<div class="photo-slide" data-src="images/local-do-evento-06.png">
+												<img src="images/local-do-evento-06.png" alt="Local do evento">
+												<div class="photo-slide-overlay"><span class="flaticon-visibility"></span></div>
+										</div>
+										<!-- adicione mais slides aqui se quiser -->
+
+								</div>
+
+								<!-- Setas -->
+								<button class="photo-strip-btn photo-strip-btn--prev" id="photosPrev" aria-label="Anterior">&#8592;</button>
+								<button class="photo-strip-btn photo-strip-btn--next" id="photosNext" aria-label="Próximo">&#8594;</button>
+						</div>
+
+				</div>
+
+				<!-- LIGHTBOX -->
+				<div class="photos-lightbox" id="photosLightbox">
+						<button class="lb-close" id="lbClose">&times;</button>
+						<button class="lb-nav lb-prev" id="lbPrev">&#8592;</button>
+						<button class="lb-nav lb-next" id="lbNext">&#8594;</button>
+						<div class="lb-img-wrap">
+								<img src="" alt="" id="lbImg">
+						</div>
+				</div>
+
+		</section>
+		<!-- END SEÇÃO FOTOS DO LOCAL DO EVENTO -->
+
+
+
+
+		<!-- DIVIDER LINE -->
+		<hr class="divider">
+
+		<!-- MARCAS PRESENTES
+		============================================= -->
+		<section id="brands" class="pt-80 pb-80 brands-section division">
+			<div class="container">
+
+				<!-- SECTION TITLE -->
+				<div class="row justify-content-center">
+					<div class="col-md-10 col-lg-8">
+						<div class="section-title mb-50 text-center">
+							<span class="section-id">Parceiros</span>
+							<h2 class="h2-title">Marcas presentes em nosso evento</h2>
+							<p class="p-lg">
+								Empresas e instituições que apoiam e participam do Vox Criminal.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="brands-slider">
+
+				<div class="brands-track">
+
+					<!-- Logos -->
+					<div class="brand-item"><img src="images/parceiros/01.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/02.png" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/03.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/04.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/06.png" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/07.png" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/08.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/09.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/10.png" alt=""></div>
+
+					<!-- Duplicadas -->
+					<div class="brand-item"><img src="images/parceiros/01.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/02.png" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/03.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/04.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/06.png" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/07.png" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/08.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/09.jpeg" alt=""></div>
+					<div class="brand-item"><img src="images/parceiros/10.png" alt=""></div>
+
+				</div>
+
+			</div>
+		</section>
+
+
+
+		<!-- SEÇÃO DEPOIMENTOS -->
+		<section class="py-100 comments-section division">
+			<div class="container">
+
+				<!-- SECTION TITLE -->
+				<div class="row justify-content-center">
+					<div class="col-md-10">
+						<div class="section-title text-center mb-80">
+							<h2 class="h2-title">O que disseram nas edições anteriores do Vox Criminal</h2>
+							<p class="p-lg">Depoimentos reais de participantes que viveram a experiência do evento</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- CAROUSEL DEPOIMENTOS -->
+				<div id="commentsCarousel" class="carousel slide" data-bs-ride="carousel">
+					
+					<div class="carousel-inner">
+
+						<!-- ITEM #1 -->
+						<div class="carousel-item active">
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<img src="images/depoimentos/depoimento-01.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 1">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-02.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 2">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-03.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 3">
+								</div>
+							</div>
+						</div>
+
+						<!-- ITEM #2 -->
+						<div class="carousel-item">
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<img src="images/depoimentos/depoimento-04.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 4">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-05.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 5">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-06.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 6">
+								</div>
+							</div>
+						</div>
+
+						<!-- ITEM #3 -->
+						<div class="carousel-item">
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<img src="images/depoimentos/depoimento-07.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 7">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-08.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 8">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-09.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 9">
+								</div>
+							</div>
+						</div>
+
+						<!-- ITEM #4 -->
+						<div class="carousel-item">
+							<div class="row">
+								<div class="col-12 col-md-4">
+									<img src="images/depoimentos/depoimento-10.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 10">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-11.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 11">
+								</div>
+								<div class="col-12 col-md-4 d-none d-md-block">
+									<img src="images/depoimentos/depoimento-12.jpeg" class="d-block w-100 comment-img rounded-3" alt="Depoimento 12">
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<!-- Controls -->
+					<button class="carousel-control-prev" type="button" data-bs-target="#commentsCarousel" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon"></span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#commentsCarousel" data-bs-slide="next">
+						<span class="carousel-control-next-icon"></span>
+					</button>
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- DIVIDER LINE -->
+		<hr class="divider">
+
+
+		<!-- SEJA UM EMBAIXADOR
+		============================================= -->
+		<section id="embaixador" class="pt-100 pb-100 division">
+			<div class="container">
+
+				<!-- SECTION TITLE -->
+				<div class="row justify-content-center">
+					<div class="col-md-9 col-lg-8">
+						<div class="section-title text-center mb-70">
+							<h2 class="h2-xl text-white">Seja um Embaixador do Vox Criminal</h2>
+							<p class="p-lg text-white">Quer fazer parte do congresso de uma forma ainda mais especial? Torne-se um Embaixador Oficial do VOX CRIMINAL, ajude a espalhar esse movimento pelo Brasil e tenha acesso a benefícios exclusivos.</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- AMBASSADOR CARDS -->
+				<div class="row row-cols-1 row-cols-md-3 justify-content-center g-4 mb-60">
+
+					<div class="col">
+						<div class="ambassador-card">
+              <div class="fbox-ico-wrap ico-40 mb-3">
+                <div class="shape-ico color--theme-2">
+                  <span class="flaticon-around-the-world"></span>
+                </div>
+              </div>
+							<h5 class="text-white mb-2">Visibilidade Nacional</h5>
+							<p class="text-white" style="opacity:.8;">Associe seu nome a um dos maiores congressos do Brasil nas áreas criminal, jurídica e psicológica.</p>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="ambassador-card">
+              <div class="fbox-ico-wrap ico-40 mb-3">
+                <div class="shape-ico color--theme-2">
+                  <span class="flaticon-check"></span>
+                </div>
+              </div>
+							<h5 class="text-white mb-2">Benefícios Exclusivos</h5>
+							<p class="text-white" style="opacity:.8;">Acesso a conteúdos, ingressos e vantagens especiais para embaixadores oficiais do evento.</p>
+						</div>
+					</div>
+
+					<div class="col">
+						<div class="ambassador-card">
+              <div class="fbox-ico-wrap ico-40 mb-3">
+                <div class="shape-ico color--theme-2">
+                  <span class="flaticon-puzzle"></span>
+                </div>
+              </div>
+							<h5 class="text-white mb-2">Networking Estratégico</h5>
+							<p class="text-white" style="opacity:.8;">Conexão direta com profissionais, estudantes e especialistas de referência em todo o país.</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row justify-content-center">
+					<div class="col-md-6 text-center">
+						<a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20quero%20ser%20Embaixador(a)%20do%20Vox%20Criminal%202026" target="_blank" rel="noopener" class="btn btn-md r-08 btn--theme hover--black text-black">
+							QUERO SER EMBAIXADOR(A)
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- END SEJA UM EMBAIXADOR -->
+
+
+		<!-- DIVIDER LINE -->
+		<hr class="divider">
+
+
+		<!-- BANNER
+		============================================= -->
+		<section id="download" class="pt-100 banner-1 banner-section">
+			<div class="container">
+
+				<!-- BANNER WRAPPER -->
+				<div class="banner-1-wrapper bg--01 bg--fixed r-24">
+					<div class="banner-overlay">
+						<div class="row d-flex align-items-center">
+
+							<!-- BANNER TEXT -->
+							<div class="col-md-7">
+								<div class="banner-1-txt color--white">
+
+									<!-- Title -->	
+									<h2 class="h2-xl">Participe deste encontro único!</h2>
+
+									<!-- Text -->	
+									<p class="p-lg">Não perca a chance de unir conhecimento, prática e inovação em um só lugar. As vagas são limitadas.</p>
+
+									<!-- Button -->
+									<div class="btns-group mt-3">
+										<a href="#planos" class="btn btn-md r-08 btn--theme hover--black text-black">QUERO GARANTIR MINHA VAGA</a>
+									</div>
+
+									<div class="mt-4">
+										<img src="./images/elements/title.png" alt="" class="w-25">
+									</div>
+
+								</div>
+							</div>	<!-- END BANNER TEXT -->
+
+						</div>   <!-- End row -->	
+					</div>   <!-- End banner overlay -->	
+				</div>    <!-- END BANNER WRAPPER -->
+
+			</div>     <!-- End container -->	
+		</section>	<!-- END BANNER -->
+
+
+
+
+		<!-- SEJA UM PATROCINADOR
+		============================================= -->	
+		<section id="patrocinador" class="pt-100 pb-100 bg--fixed hero-section division">
+			<div class="container">	
+				
+				<!-- HERO TEXT -->
+				<div class="row justify-content-center">
+					<div class="col-md-10">
+						<div class="hero-18-txt text-center">
+
+							<!-- Logo ou ícone -->
+							<div class="hero-app-logo mb-4">
+								<img class="img-fluid" src="images/logo-white.png" alt="Vox Criminal Logo">
+							</div>
+
+							<!-- Title -->
+							<h2 class="h2-xl text-white">Seja um Patrocinador do Vox Criminal 2026</h2>
+
+							<!-- Text -->
+							<p class="p-xl text-white">
+								Em 2026, sua marca pode brilhar. Associe seu negócio a um dos maiores congressos do Brasil nas áreas de 
+								<strong>Direito Penal, Psicologia Jurídica e Perícia Criminal</strong>.  
+								Dois dias de imersão com profissionais de destaque, pesquisadores e estudantes, 
+								gerando <strong>visibilidade nacional</strong>, autoridade de marca e networking estratégico para o seu negócio.
+							</p>
+
+							<!-- CTA -->
+							<div class="btns-group mt-4 w-100">
+								<a href="https://wa.me/5582988015655?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal%20e%20quero%20ser%20patrocinador(a)." target="_blank" rel="noopener" class="btn btn-md r-08 btn--theme hover--black text-black">
+									QUERO SER UM(A) PATROCINADOR(A)
+								</a>
+							</div>
+
+						</div>
+					</div>
+				</div>    
+
+			</div>	   
+		</section>	
+		<!-- END SEJA UM PATROCINADOR -->
+
+
+
+		<!-- DIVIDER LINE -->
+		<hr class="divider">
+
+
+
+		<!-- SEJA UM PALESTRANTE
+		============================================= -->
+		<section id="palestrante" class="pt-100 pb-100 division">
+			<div class="container">
+
+				<div class="row justify-content-center">
+					<div class="col-lg-10">
+						<div class="text-center">
+
+							<h2 class="h2-xl mb-4">
+								Deseja ser um palestrante do Vox Criminal 2026?
+							</h2>
+
+							<p class="p-xl mb-4">
+								Compartilhe seu conhecimento com uma audiência qualificada e tenha sua expertise apresentada para mais de
+								<strong>5 mil pessoas</strong> entre profissionais, estudantes, pesquisadores e especialistas de todo o Brasil.
+							</p>
+
+							<a href="https://wa.me/5582988283005?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20ser%20palestrante%20do%20Vox%20Criminal%202026."
+								target="_blank"
+								rel="noopener"
+								class="btn btn-md r-08 btn--theme hover--black text-black">
+								QUERO SER PALESTRANTE
+							</a>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- END SEJA UM PALESTRANTE -->
+
+
+		
+
+		<!-- DIVIDER LINE -->
+		<hr class="divider">
+
+
+		<!-- FAQs
+		============================================= -->
+		<section id="faqs" class="py-100 faqs-1 faqs-section division">				
+			<div class="container">
+
+				<!-- SECTION TITLE -->	
+				<div class="row justify-content-center">	
+					<div class="col-md-9 col-lg-8">
+						<div class="section-title text-center mb-60">	
+							<h2 class="h2-xl">Perguntas Frequentes</h2>	
+							<p class="p-lg">Confira as principais dúvidas sobre o Congresso e os planos de inscrição.</p>
+						</div>	
+					</div>
+				</div>
+
+				<!-- FAQs QUESTIONS -->	
+				<div class="faqs-1-questions">
+					<div class="row justify-content-center">
+						<div class="col-xl-11">
+							<div class="accordion-wrapper">
+								<ul class="accordion">
+
+									<!-- FAQ #1 -->
+									<li class="accordion-item is-active wow animate__animated animate__fadeInUp">
+										<div class="accordion-thumb">
+											<h5>Quando e onde será realizado o evento?</h5>
+										</div>
+										<div class="accordion-panel">
+											<p>O Congresso será realizado nos dias <strong>7 e 8 de Agosto de 2026</strong> em Recife – PE, no <strong>Shopping Rio Mar – Rio Mar Eventos</strong>. 
+											Haverá também <strong>transmissão ao vivo</strong> para inscritos na modalidade online.</p>
+										</div>
+									</li>
+
+									<!-- FAQ #2 -->
+									<li class="accordion-item wow animate__animated animate__fadeInUp">
+										<div class="accordion-thumb">
+											<h5>Qual a programação dos dois dias?</h5>
+										</div>
+										<div class="accordion-panel">
+											<ul class="simple-list">
+												<li><p><strong>07/08 (sexta)</strong> – Palestras das 09h às 12h · Intervalo · Retorno às 14h até 18h · Jantar com palestrantes (Master Plus)</p></li>
+												<li><p><strong>08/08 (sábado)</strong> – Palestras das 09h às 12h · Intervalo · Retorno às 14h até 18h</p></li>
+											</ul>
+										</div>
+									</li>
+
+									<!-- FAQ #3 -->
+									<li class="accordion-item wow animate__animated animate__fadeInUp">
+										<div class="accordion-thumb">
+											<h5>Quem pode participar do Congresso?</h5>
+										</div>
+										<div class="accordion-panel">
+											<p>O evento é destinado a <strong>estudantes e profissionais</strong> das áreas de Direito, Psicologia, Psicanálise, Medicina, Psiquiatria, 
+											Serviço Social, Terapia Ocupacional, Segurança Pública, Biomedicina e Farmácia. Também é ideal para <strong>pesquisadores, professores</strong>, 
+											peritos criminais e qualquer interessado em criminologia.</p>
+										</div>
+									</li>
+
+									<!-- FAQ #4 -->
+									<li class="accordion-item wow animate__animated animate__fadeInUp">
+										<div class="accordion-thumb">
+											<h5>Quais são os planos disponíveis e seus benefícios?</h5>
+										</div>
+										<div class="accordion-panel">
+											<ul class="simple-list">
+												<li><p><strong>Estudante Individual</strong> – R$ 79,90 · Acesso + Kit básico + Certificado 30h + Gravação 30 dias</p></li>
+												<li><p><strong>Profissional Individual</strong> – R$ 199,00 · Acesso + Kit básico (ecobag, bloco, caneta, crachá) + Certificado 30h + Gravação 30 dias</p></li>
+												<li><p><strong>Lote Prata</strong> – R$ 349,90 · Cadeiras frontais + Kit Diamante + Certificado 30h + Gravação 60 dias + Copo oficial</p></li>
+												<li><p><strong>Grupo de 5 Estudantes</strong> – R$ 109,00 (por pessoa) · Acesso + Kit básico + Certificado 30h</p></li>
+												<li><p><strong>Versão Online</strong> – A confirmar · Transmissão ao vivo + Gravação 30 dias</p></li>
+												<li><p><strong>Lote Master Plus</strong> – R$ 899,90 · Jantar com palestrantes + Acesso VIP + Kit personalizado (blusa Vox, ecobag, copo, caderno e caneta) + Certificado 50h</p></li>
+											</ul>
+										</div>
+									</li>
+
+									<!-- FAQ #5 -->
+									<li class="accordion-item wow animate__animated animate__fadeInUp">
+										<div class="accordion-thumb">
+											<h5>Recebo certificado de participação?</h5>
+										</div>
+										<div class="accordion-panel">
+											<p>Sim! Todos os participantes recebem <strong>certificado de 30h</strong> complementares. 
+											O <strong>Lote Master Plus</strong> inclui certificado de <strong>50h</strong> do congresso.</p>
+										</div>
+									</li>
+
+									<!-- FAQ #6 -->
+									<li class="accordion-item wow animate__animated animate__fadeInUp">
+										<div class="accordion-thumb">
+											<h5>Como funciona a transmissão online?</h5>
+										</div>
+										<div class="accordion-panel">
+											<p>Os inscritos na modalidade online recebem por e-mail, um dia antes do evento, o link para acessar a transmissão ao vivo. 
+											A gravação fica disponível por <strong>30 dias</strong> após o congresso.</p>
+										</div>
+									</li>
+
+									<!-- FAQ #7 -->
+									<li class="accordion-item wow animate__animated animate__fadeInUp">
+										<div class="accordion-thumb">
+											<h5>Quais as formas de pagamento?</h5>
+										</div>
+										<div class="accordion-panel">
+											<p>Aceitamos <strong>cartão de crédito</strong> (parcelado em até 12x), <strong>boleto bancário</strong> e <strong>Pix</strong>.</p>
+										</div>
+									</li>
+
+								</ul>
+							</div>
+						</div>
+					</div>	
+				</div>
+
+				<!-- MORE QUESTIONS -->	
+				<div class="more-questions clearfix">
+					<div class="more-questions-holder wow animate__animated animate__fadeInUp">
+					
+						<div class="more-questions-txt">
+							<h6 class="h6-xl">Não encontrou a resposta para a sua dúvida?</h6>
+							<p class="p-sm">Clique no botão e entre em contato conosco.</p>
+						</div>
+
+						<div class="more-questions-btn"> 
+							<a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal." target="_blank" rel="noopener" class="btn r-36 btn--tra-black hover--theme">Fale Conosco <span class="flaticon-whatsapp ms-1"></span></a>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+
+		<!-- DIVIDER LINE -->
+		<hr class="divider">
+
+
+		<!-- FOOTER
+		============================================= -->
+		<footer class="pt-100 footer-3 footer division">
+			<div class="container">
+
+				<!-- FOOTER CONTENT -->
+				<div class="row text-center">
+
+						<!-- FOOTER LOGO -->
+						<div class="col-12 mb-0">
+								<div class="footer-info mb-3">
+										<img class="footer-logo" src="images/logo-white.png" alt="footer-logo">
+								</div>	
+						</div>
+
+						<div class="col-12">
+								<div class="footer-info">
+										<img src="images/elements/subtitle.png" alt="footer-logo" width="280">
+								</div>	
+						</div>
+
+						<!-- FOOTER SOCIAL -->
+						<div class="col-12">
+								<div class="footer-connect">
+										<!-- Social Links -->	
+										<ul class="footer-socials ico-25 justify-content-center d-flex gap-3">
+											<li><a href="#"><span class="flaticon-instagram"></span></a></li>
+												<li><a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal." target="_blank" rel="noopener"><span class="flaticon-whatsapp"></span></a></li>
+										</ul>
+								</div>	
+						</div>
+
+				</div>
+				<!-- END FOOTER CONTENT -->
+
+				<hr>
+
+				<!-- BOTTOM FOOTER -->
+				<div class="bottom-footer">
+					<div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
+
+						<!-- FOOTER COPYRIGHT -->
+						<div class="col">
+							<div class="footer-copyright"><p class="p-sm" style="font-size: .8rem; font-weight: 300;">&copy; 2026 Vox Criminal. <span>Todos os direitos reservados</span></p></div>
+						</div>
+
+						<!-- FOOTER LINKS -->
+						<div class="col">
+							<ul class="bottom-footer-list ico-10 text-end">
+								<li><p class="p-sm" style="font-size: .8rem; font-weight: 300;">Desenvolvido por <a href="https://joao-pedro-dev.vercel.app/" target="_blank" rel="noopener">João Pedro Dev</a></p></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>     <!-- End container -->	
+		</footer>   <!-- END FOOTER -->
+
+
+		<!-- SPEAKER MODAL -->
+		<div class="modal fade" id="speakerModal" tabindex="-1">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"><span>x</span></button>
+
+					<div class="modal-body d-flex flex-column flex-md-row align-items-center">
+						<img id="speakerImage" src="" class="img-fluid rounded mb-3 mb-md-0 me-md-4" style="max-width: 250px;">
+						<div style="padding: 32px;">
+							<h4 id="speakerName" class="fw-bold mb-2"></h4>
+							<p id="speakerRole" class="fw-bold mb-1"></p>
+							<p id="speakerInstitution" class="mb-3"></p>
+							<p id="speakerDescription"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		</div>	<!-- END PAGE CONTENT -->
+
+
+		<!-- BOTÃO FLUTUANTE WHATSAPP -->
+		<a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal." 
+			class="whatsapp-float" 
+			target="_blank"
+			rel="noopener"
+			aria-label="Fale conosco no WhatsApp">
+			<span class="flaticon-whatsapp" style="color: white; margin-bottom: 0 !important;"></span>
+		</a>
+
+
+		<!-- EXTERNAL SCRIPTS
+		============================================= -->	
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/jquery.appear.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>	
+		<script src="js/popper.min.js"></script>
+		<script src="js/lunar.js"></script>
+		<script src="js/wow.js"></script>
+		<script src="js/speakers.js"></script>
+		
+		<!-- Custom Script -->		
+		<script src="js/custom.js"></script>
+
+		<!-- Countdown Script -->
+		<script>
+			function updateCountdown() {
+				const eventDate = new Date('2026-08-07T09:00:00');
+				const now = new Date();
+				const diff = eventDate - now;
+
+				if (diff <= 0) {
+					document.getElementById('countdown').innerHTML = '<p class="text-white">O evento está acontecendo agora! 🎉</p>';
+					return;
+				}
+
+				const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+				const hours   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+				const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+				document.getElementById('count-days').textContent    = String(days).padStart(2, '0');
+				document.getElementById('count-hours').textContent   = String(hours).padStart(2, '0');
+				document.getElementById('count-minutes').textContent = String(minutes).padStart(2, '0');
+				document.getElementById('count-seconds').textContent = String(seconds).padStart(2, '0');
+			}
+
+			updateCountdown();
+			setInterval(updateCountdown, 1000);
+		</script>
+
+		<script>
+			$(document).on({
+			    "contextmenu": function (e) {
+			        e.preventDefault();
+			    },
+			    "mousedown": function(e) { },
+			    "mouseup": function(e) { }
+			});
+		</script>
+
+		<script>
+			/* ============================================
+				PHOTOS STRIP + LIGHTBOX
+			============================================= */
+			(function() {
+					const strip     = document.getElementById('photosStrip');
+					const btnPrev   = document.getElementById('photosPrev');
+					const btnNext   = document.getElementById('photosNext');
+					const lightbox  = document.getElementById('photosLightbox');
+					const lbImg     = document.getElementById('lbImg');
+					const lbClose   = document.getElementById('lbClose');
+					const lbPrev    = document.getElementById('lbPrev');
+					const lbNext    = document.getElementById('lbNext');
+
+					if (!strip) return;
+
+					const slides    = Array.from(strip.querySelectorAll('.photo-slide'));
+					const srcs      = slides.map(s => s.dataset.src);
+					let currentOffset = 0;
+					let lbIndex = 0;
+
+					/* -- Largura de um slide + gap -- */
+					function slideWidth() {
+							const s = slides[0];
+							const gap = 12;
+							return s.offsetWidth + gap;
+					}
+
+					/* -- Máximo que pode deslocar -- */
+					function maxOffset() {
+							const wrap = strip.parentElement;
+							const totalW = slides.reduce((acc, s) => acc + s.offsetWidth + 12, 0) - 12;
+							const visible = wrap.offsetWidth - 120; // desconta padding das setas
+							return Math.max(0, totalW - visible);
+					}
+
+					function applyOffset() {
+							strip.style.transform = `translateX(-${currentOffset}px)`;
+					}
+
+					btnNext.addEventListener('click', () => {
+							currentOffset = Math.min(currentOffset + slideWidth(), maxOffset());
+							applyOffset();
+					});
+
+					btnPrev.addEventListener('click', () => {
+							currentOffset = Math.max(currentOffset - slideWidth(), 0);
+							applyOffset();
+					});
+
+					/* -- Lightbox -- */
+					function openLb(index) {
+							lbIndex = index;
+							lbImg.src = srcs[lbIndex];
+							lightbox.classList.add('active');
+							document.body.style.overflow = 'hidden';
+					}
+
+					function closeLb() {
+							lightbox.classList.remove('active');
+							document.body.style.overflow = '';
+					}
+
+					slides.forEach((slide, i) => {
+							slide.addEventListener('click', () => openLb(i));
+					});
+
+					lbClose.addEventListener('click', closeLb);
+
+					lbNext.addEventListener('click', () => {
+							lbIndex = (lbIndex + 1) % srcs.length;
+							lbImg.src = srcs[lbIndex];
+					});
+
+					lbPrev.addEventListener('click', () => {
+							lbIndex = (lbIndex - 1 + srcs.length) % srcs.length;
+							lbImg.src = srcs[lbIndex];
+					});
+
+					lightbox.addEventListener('click', (e) => {
+							if (e.target === lightbox) closeLb();
+					});
+
+					document.addEventListener('keydown', (e) => {
+							if (!lightbox.classList.contains('active')) return;
+							if (e.key === 'Escape') closeLb();
+							if (e.key === 'ArrowRight') lbNext.click();
+							if (e.key === 'ArrowLeft')  lbPrev.click();
+					});
+			})();
+		</script>
+
+
+	</body> 
+
+
+
+</html>

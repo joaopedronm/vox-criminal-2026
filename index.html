@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="Vox Criminal">
+		<meta name="description" content="Vox Criminal - Congressos de Direito, Perícia Criminal e Psicologia Jurídica">
+		<meta name="keywords" content="Evento, Direito, Perícia, Psicologia Jurídica, Vox Criminal">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- SITE TITLE -->
+		<title>Vox Criminal - Todos os Eventos</title>
+
+		<!-- FAVICON AND TOUCH ICONS -->
+		<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+		<link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+		<!-- BOOTSTRAP CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- FONT ICONS -->
+		<link href="css/flaticon.css" rel="stylesheet">
+
+		<!-- PLUGINS STYLESHEET -->
+		<link href="css/menu.css" rel="stylesheet">
+		<link id="effect" href="css/dropdown-effects/fade-down.css" media="all" rel="stylesheet">
+		<link href="css/magnific-popup.css" rel="stylesheet">
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/lunar.css" rel="stylesheet">
+
+		<!-- ON SCROLL ANIMATION -->
+		<link href="css/animate.css" rel="stylesheet">
+
+		<!-- TEMPLATE CSS -->
+		<link href="css/pink-theme.css" rel="stylesheet">
+
+		<!-- RESPONSIVE CSS -->
+		<link href="css/responsive.css" rel="stylesheet">
+
+		<!-- ADITIONAL CSS -->
+		<link rel="stylesheet" href="css/aditional.css">
+
+		<style>
+			/* ===== HOME DE EVENTOS ===== */
+
+			/* Card de evento */
+			.event-card {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				border-radius: 16px;
+				overflow: hidden;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				transition: transform .25s ease, border-color .25s ease;
+			}
+			.event-card:hover {
+				transform: translateY(-6px);
+				border-color: rgba(255, 255, 255, 0.25);
+			}
+
+			.event-card-img-wrap {
+				position: relative;
+				aspect-ratio: 16 / 10;
+				overflow: hidden;
+			}
+			.event-card-img-wrap img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition: transform .35s ease, filter .35s ease;
+			}
+			.event-card:hover .event-card-img-wrap img {
+				transform: scale(1.05);
+			}
+
+			/* Evento encerrado: imagem em P&B + overlay */
+			.event-card.is-past .event-card-img-wrap img {
+				filter: grayscale(85%);
+			}
+			.event-card.is-past .event-card-img-wrap::after {
+				content: "";
+				position: absolute;
+				inset: 0;
+				background: rgba(0,0,0,0.35);
+			}
+
+			/* Badge de status */
+			.event-status {
+				position: absolute;
+				top: 14px;
+				left: 14px;
+				z-index: 2;
+				font-size: 11px;
+				font-weight: 700;
+				letter-spacing: .06em;
+				text-transform: uppercase;
+				padding: 5px 12px;
+				border-radius: 20px;
+			}
+			.event-status--open {
+				background: var(--theme-color, #e91e63);
+				color: #fff;
+			}
+			.event-status--past {
+				background: rgba(255,255,255,0.9);
+				color: #222;
+			}
+
+			.event-card-body {
+				padding: 22px 24px 26px;
+				display: flex;
+				flex-direction: column;
+				flex-grow: 1;
+			}
+
+			.event-meta {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6px 16px;
+				font-size: 13px;
+				opacity: .75;
+				margin-bottom: 10px;
+			}
+			.event-meta span {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+			}
+
+			.event-card-body p.event-desc {
+				font-size: 14.5px;
+				opacity: .85;
+				margin-bottom: 20px;
+			}
+
+			.event-card-footer {
+				margin-top: auto;
+			}
+
+			/* Filtros simples (Todos / Próximos / Encerrados) */
+			.event-filters {
+				display: flex;
+				gap: 10px;
+				justify-content: center;
+				flex-wrap: wrap;
+				margin-bottom: 40px;
+			}
+			.event-filter-btn {
+				border: 1px solid rgba(255,255,255,0.2);
+				background: transparent;
+				color: inherit;
+				font-size: 13px;
+				font-weight: 600;
+				letter-spacing: .02em;
+				padding: 8px 20px;
+				border-radius: 30px;
+				cursor: pointer;
+				transition: all .2s ease;
+			}
+			.event-filter-btn:hover {
+				border-color: var(--theme-color, #e91e63);
+			}
+			.event-filter-btn.is-active {
+				background: var(--theme-color, #e91e63);
+				border-color: var(--theme-color, #e91e63);
+				color: #fff;
+			}
+
+			.event-card.is-hidden {
+				display: none;
+			}
+		</style>
+
+	</head>
+
+
+
+	<body class="theme--dark">
+
+		<!-- PRELOADER SPINNER
+		============================================= -->
+		<div id="loading">
+			<div id="loader" class="loading--theme">
+				<div class="cssload-spinner"></div>
+			</div>
+		</div>
+
+
+		<!-- PAGE CONTENT
+		============================================= -->
+		<div id="page" class="page">
+
+
+		<!-- HEADER
+		============================================= -->
+		<header id="header" class="tra-menu navbar-light white-scroll">
+				<div class="header-wrapper">
+
+				    <div class="wsmobileheader clearfix">
+				    	<span class="smllogo">
+				    		<a href="#hero-2">
+					    		<img src="images/logo.png" alt="mobile-logo">
+					    	</a>
+				    	</span>
+				    	<a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
+				 	</div>
+
+				  	<div class="wsmainfull menu clearfix">
+	    				<div class="wsmainwp clearfix">
+
+	    					<div class="desktoplogo">
+	    						<a href="#hero-2" class="logo-black">
+	    							<img src="images/logo.png" alt="logo">
+	    						</a>
+	    					</div>
+
+	    					<div class="desktoplogo">
+	    						<a href="#hero-2" class="logo-white"><img src="images/logo.png" alt="logo"></a>
+	    					</div>
+
+      					<nav class="wsmenu clearfix">
+        					<ul class="wsmenu-list nav-theme">
+
+						    	<li class="nl-simple" aria-haspopup="true">
+						    		<a href="#hero-2" class="h-link">Home</a>
+						    	</li>
+
+						    	<li class="nl-simple" aria-haspopup="true">
+						    		<a href="#eventos" class="h-link">Eventos</a>
+						    	</li>
+
+						    	<li class="nl-simple mobile-last-link" aria-haspopup="true">
+						    		<a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal." target="_blank" rel="noopener" class="btn r-36 ico-20 ico-right btn--theme hover--tra-white last-link">Fale Conosco</a>
+						    	</li>
+
+        					</ul>
+        				</nav>
+
+    				</div>
+    			</div>
+
+			</div>
+		</header>
+		<!-- END HEADER -->
+
+
+		<!-- HERO
+		============================================= -->
+		<section id="hero-2" class="bg--fixed hero-section division">
+			<div class="container">
+				<div class="row justify-content-center">
+
+					<div class="col-md-9">
+						<div class="hero-2-txt text-center color--white wow animate__animated animate__fadeInUp">
+
+							<img src="./images/logo.png" alt="Vox Criminal" class="w-50 mb-4">
+
+							<h1 class="h1-xl">Congressos Vox Criminal</h1>
+							<p class="p-lg mt-3 mb-0">
+								Direito Penal, Perícia Criminal e Psicologia Jurídica reunidos em um só palco.
+								Confira abaixo as próximas edições e reveja os eventos que já rolaram.
+							</p>
+
+							<div class="btns-group mt-4">
+								<a href="#eventos" class="btn btn-md r-08 btn--theme hover--black text-black">Ver Eventos</a>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- END HERO -->
+
+
+		<!-- EVENTOS
+		============================================= -->
+		<section id="eventos" class="pt-100 pb-100 division">
+			<div class="container">
+
+				<!-- SECTION TITLE -->
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="section-title text-center mb-50">
+							<span class="section-id">Agenda</span>
+							<h2 class="h2-xl">Nossos Eventos</h2>
+						</div>
+					</div>
+				</div>
+
+				<!-- FILTROS -->
+				<div class="event-filters">
+					<button class="event-filter-btn is-active" data-filter="all">Todos</button>
+					<button class="event-filter-btn" data-filter="upcoming">Próximos</button>
+					<button class="event-filter-btn" data-filter="past">Já Realizados</button>
+				</div>
+
+				<!-- GRID DE EVENTOS -->
+				<div id="events-grid" class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+					<!-- ============================================
+						 EVENTO #1 - EXEMPLO: PRÓXIMO EVENTO
+						 Para adicionar um novo evento, copie este bloco inteiro,
+						 troque a classe "is-upcoming" (ou "is-past"), a imagem,
+						 título, data/local, descrição e o link do botão.
+						 ============================================= -->
+					<div class="col event-item" data-status="upcoming">
+						<div class="event-card is-upcoming wow animate__animated animate__fadeInUp">
+							<div class="event-card-img-wrap">
+								<span class="event-status event-status--open">Inscrições Abertas</span>
+								<img src="images/eventos/vox-criminal-garanhus.jpg" alt="Vox Criminal - Garanhus">
+							</div>
+							<div class="event-card-body">
+								<h5 class="h5-lg mb-2">Vox Criminal - Edição Garanhus</h5>
+								<div class="event-meta">
+									<span><span class="flaticon-calendar"></span> 19 Set 2026</span>
+									<span><span class="flaticon-pin"></span> Teatro do SESC, Garanhus - PE</span>
+								</div>
+								<p class="event-desc">Congresso de Direito Penal, Perícia Criminal e Psicologia Jurídica. Dois dias de imersão com os maiores nomes do país.</p>
+								<div class="event-card-footer">
+									<a href="./garanhus-2026/index.html" class="btn btn-sm r-36 btn--theme hover--black text-black w-100">Ver Página do Evento</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- ============================================
+						 EVENTO #2 - EXEMPLO: EVENTO JÁ FINALIZADO
+						 ============================================= -->
+					<div class="col event-item" data-status="past">
+						<div class="event-card is-past wow animate__animated animate__fadeInUp">
+							<div class="event-card-img-wrap">
+								<span class="event-status event-status--past">Encerrado</span>
+								<img src="images/eventos/vox-criminal-recife.jpg" alt="Vox Criminal - Recife">
+							</div>
+							<div class="event-card-body">
+								<h5 class="h5-lg mb-2">Vox Criminal - Edição Recife</h5>
+								<div class="event-meta">
+									<span><span class="flaticon-calendar"></span> Mar 2026</span>
+									<span><span class="flaticon-pin"></span> Recife - PE</span>
+								</div>
+								<p class="event-desc">Confira como foi essa edição, com painéis sobre Tribunal do Júri, Segurança Pública e Psicologia Clínica.</p>
+								<div class="event-card-footer">
+									<a href="vox-criminal-recife.html" class="btn btn-sm r-36 btn--tra-white hover--theme w-100">Ver Página do Evento</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- ============================================
+						 EVENTO #3 - EXEMPLO: OUTRO EVENTO FINALIZADO
+						 ============================================= -->
+					<div class="col event-item" data-status="past">
+						<div class="event-card is-past wow animate__animated animate__fadeInUp">
+							<div class="event-card-img-wrap">
+								<span class="event-status event-status--past">Encerrado</span>
+								<img src="images/eventos/vox-criminal-fortaleza.jpg" alt="Vox Criminal - Fortaleza">
+							</div>
+							<div class="event-card-body">
+								<h5 class="h5-lg mb-2">Vox Criminal - Edição Fortaleza</h5>
+								<div class="event-meta">
+									<span><span class="flaticon-calendar"></span> Nov 2025</span>
+									<span><span class="flaticon-pin"></span> Fortaleza - CE</span>
+								</div>
+								<p class="event-desc">A primeira edição que reuniu mais de 2 mil participantes e 50 palestrantes em um só evento.</p>
+								<div class="event-card-footer">
+									<a href="vox-criminal-fortaleza.html" class="btn btn-sm r-36 btn--tra-white hover--theme w-100">Ver Página do Evento</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- END GRID DE EVENTOS -->
+
+			</div>
+		</section>
+		<!-- END EVENTOS -->
+
+
+		<!-- DIVIDER LINE -->
+		<hr class="divider">
+
+
+		<!-- BANNER
+		============================================= -->
+		<section id="download" class="pt-100 pb-100 banner-1 banner-section">
+			<div class="container">
+
+				<div class="banner-1-wrapper bg--01 bg--fixed r-24">
+					<div class="banner-overlay">
+						<div class="row d-flex align-items-center">
+
+							<div class="col-md-7">
+								<div class="banner-1-txt color--white">
+
+									<h2 class="h2-xl">Quer trazer o Vox Criminal para a sua cidade?</h2>
+									<p class="p-lg">Fale com a gente e saiba como se tornar parceiro ou patrocinador de uma próxima edição.</p>
+
+									<div class="btns-group mt-3">
+										<a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal." target="_blank" rel="noopener" class="btn btn-md r-08 btn--theme hover--black text-black">FALE CONOSCO</a>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- END BANNER -->
+
+
+		<!-- FOOTER
+		============================================= -->
+		<footer class="pt-100 footer-3 footer division">
+			<div class="container">
+
+				<div class="row text-center">
+
+						<div class="col-12 mb-0">
+								<div class="footer-info mb-3">
+										<img class="footer-logo" src="images/logo.png" alt="footer-logo">
+								</div>
+						</div>
+
+						<div class="col-12">
+								<div class="footer-connect">
+										<ul class="footer-socials ico-25 justify-content-center d-flex gap-3">
+											<li><a href="#"><span class="flaticon-instagram"></span></a></li>
+											<li><a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal." target="_blank" rel="noopener"><span class="flaticon-whatsapp"></span></a></li>
+										</ul>
+								</div>
+						</div>
+
+				</div>
+
+				<hr>
+
+				<div class="bottom-footer">
+					<div class="row row-cols-1 row-cols-md-2 d-flex align-items-center">
+
+						<div class="col">
+							<div class="footer-copyright"><p class="p-sm" style="font-size: .8rem; font-weight: 300;">&copy; 2026 Vox Criminal. <span>Todos os direitos reservados</span></p></div>
+						</div>
+
+						<div class="col">
+							<ul class="bottom-footer-list ico-10 text-end">
+								<li><p class="p-sm" style="font-size: .8rem; font-weight: 300;">Desenvolvido por <a href="https://joao-pedro-dev.vercel.app/" target="_blank" rel="noopener">João Pedro Dev</a></p></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- END FOOTER -->
+
+
+		</div>	<!-- END PAGE CONTENT -->
+
+
+		<!-- BOTÃO FLUTUANTE WHATSAPP -->
+		<a href="https://wa.me/5581988923755?text=Ol%C3%A1%2C%20vim%20do%20Site%20da%20Vox%20Criminal."
+			class="whatsapp-float"
+			target="_blank"
+			rel="noopener"
+			aria-label="Fale conosco no WhatsApp">
+			<span class="flaticon-whatsapp" style="color: white; margin-bottom: 0 !important;"></span>
+		</a>
+
+
+		<!-- EXTERNAL SCRIPTS
+		============================================= -->
+		<script src="js/jquery-3.7.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/jquery.appear.js"></script>
+		<script src="js/menu.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/lunar.js"></script>
+		<script src="js/wow.js"></script>
+
+		<!-- Custom Script -->
+		<script src="js/custom.js"></script>
+
+		<script>
+			$(document).on({
+			    "contextmenu": function (e) {
+			        e.preventDefault();
+			    },
+			    "mousedown": function(e) { },
+			    "mouseup": function(e) { }
+			});
+		</script>
+
+		<!-- Filtro simples dos cards de evento -->
+		<script>
+			(function() {
+				const buttons = document.querySelectorAll('.event-filter-btn');
+				const items = document.querySelectorAll('.event-item');
+
+				buttons.forEach(btn => {
+					btn.addEventListener('click', () => {
+						buttons.forEach(b => b.classList.remove('is-active'));
+						btn.classList.add('is-active');
+
+						const filter = btn.dataset.filter;
+
+						items.forEach(item => {
+							if (filter === 'all' || item.dataset.status === filter) {
+								item.classList.remove('is-hidden');
+							} else {
+								item.classList.add('is-hidden');
+							}
+						});
+					});
+				});
+			})();
+		</script>
+
+	</body>
+
+</html>

@@ -1,0 +1,405 @@
+/* ============================================
+   NÚMEROS DO EVENTO
+============================================= */
+.numero-card {
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    aspect-ratio: 3/4;
+}
+
+.numero-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.numero-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: inherit;
+    filter: brightness(.55);
+    transition: transform .4s ease, filter .4s ease;
+}
+
+.numero-card:hover .numero-img-wrap img {
+    transform: scale(1.04);
+    filter: brightness(.4);
+}
+
+.numero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px 20px;
+    text-align: left;
+}
+
+.numero-icon {
+    font-size: 2rem;
+    color: var(--color-theme, #f4c430);
+    display: block;
+}
+
+.numero-label {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: .01em;
+    text-align: center;
+}
+
+
+/* ============================================
+   CARROSSEL INFINITO (STRIP)
+============================================= */
+.strip-carousel-wrap {
+    width: 100%;
+    padding: 8px 0;
+}
+
+.strip-track {
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    will-change: transform;
+}
+
+.strip-track img {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* animação via CSS puro */
+.strip-track--1 {
+    animation: stripLeft 30s linear infinite;
+}
+
+.strip-track--2 {
+    animation: stripRight 30s linear infinite;
+}
+
+@keyframes stripLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@keyframes stripRight {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+/* Pausa no hover */
+.strip-carousel-wrap:hover .strip-track {
+    animation-play-state: paused;
+}
+
+
+/* ============================================
+   FRASE DE DESTAQUE
+============================================= */
+.strip-headline {
+    background: var(--color-theme, #f4c430);
+    padding: 22px 0;
+    text-align: center;
+}
+
+.strip-headline p {
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-weight: 800;
+    color: #111;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/* ============================================
+   PHOTOS STRIP
+============================================= */
+.photos-strip-wrap {
+    position: relative;
+    overflow: hidden;
+    padding: 0 60px;
+}
+
+.photos-strip {
+    display: flex;
+    gap: 12px;
+    transition: transform .4s ease;
+    will-change: transform;
+}
+
+.photo-slide {
+    flex: 0 0 calc(25% - 9px);
+    height: 340px;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .photo-slide { flex: 0 0 calc(50% - 6px); }
+}
+
+@media (max-width: 575px) {
+    .photo-slide { flex: 0 0 calc(85%); }
+    .photos-strip-wrap { padding: 0 40px; }
+}
+
+.photo-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .4s ease;
+}
+
+.photo-slide:hover img {
+    transform: scale(1.05);
+}
+
+.photo-slide-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.photo-slide:hover .photo-slide-overlay {
+    opacity: 1;
+}
+
+.photo-slide-overlay span {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+/* Setas */
+.photo-strip-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-theme, #f4c430);
+    color: #111;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+    line-height: 1;
+}
+
+.photo-strip-btn:hover { background: #e0b020; }
+.photo-strip-btn--prev { left: 10px; }
+.photo-strip-btn--next { right: 10px; }
+
+/* ============================================
+   LIGHTBOX
+============================================= */
+.photos-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.92);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.photos-lightbox.active {
+    display: flex;
+}
+
+.lb-img-wrap {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lb-img-wrap img {
+    max-width: 90vw;
+    max-height: 85vh;
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+}
+
+.lb-close {
+    position: fixed;
+    top: 20px;
+    right: 28px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.8rem;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 10000;
+}
+
+.lb-nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,.15);
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s;
+    z-index: 10000;
+}
+
+.lb-nav:hover { background: rgba(255,255,255,.3); }
+.lb-prev { left: 16px; }
+.lb-next { right: 16px; }
+
+.hero-banner {
+    overflow: hidden;
+
+    border-radius: 0 0 60px 60px;
+}
+
+@media (max-width: 575px) {
+    .hero-banner {
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+#conteudosCarousel {
+    border-radius: 24px;
+}
+
+#conteudosCarousel .carousel-item img {
+    width: 100%;
+    height: 540px;   /* ajuste para a altura da sua imagem atual */
+    object-fit: cover;
+    display: block;
+}
+
+#conteudosCarousel .carousel-control-prev,
+#conteudosCarousel .carousel-control-next {
+    width: 8%;
+}
+
+#conteudosCarousel .carousel-indicators {
+    margin-bottom: 1rem;
+}
+
+#conteudosCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* ===================================
+   BRANDS
+=================================== */
+
+.brands-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 20px;
+}
+
+.brands-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: brandsScroll 28s linear infinite;
+}
+
+.brand-item {
+    flex: 0 0 auto;
+    width: 220px;
+    height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 25px;
+    padding: 15px;
+
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.06);
+}
+
+.brand-item img {
+    max-width: 150px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+
+    /* filter: grayscale(100%); */
+    /* opacity: .8; */
+    transition: .35s;
+}
+
+.brand-item:hover img {
+    filter: grayscale(0);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@keyframes brandsScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+}
+
+@media (max-width:991px){
+
+    .brand-item{
+        width:170px;
+        height:90px;
+        margin:0 15px;
+    }
+
+    .brand-item img{
+        max-width:120px;
+        max-height:55px;
+    }
+
+}
