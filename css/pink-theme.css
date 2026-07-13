@@ -345,7 +345,7 @@ section,
   background-size: cover;
 }
 
-.bg--01 { background-image: url(../images/bg-02.png); }
+/* .bg--01 { background-image: url(../images/bg-02.png); } */
 .bg--02 { background-image: url(../images/bg-02.jpg); }
 .bg--03 { background-image: url(../images/bg-03.jpg); }
 .bg--04 { background-image: url(../images/bg-04.jpg); }
@@ -2642,7 +2642,7 @@ span.sm-info {
 /*------------------------------------------*/
 
 #hero-2 {
-  background-image: url(../images/elements/background2.png);
+  /* background-image: url(../images/elements/background2.png); */
   padding-top: 180px;
   padding-bottom: 130px;
 }
